@@ -343,9 +343,11 @@ func (g *GoWSDL) genServer() ([]byte, error) {
 		"stripns":              stripns,
 		"replaceReservedWords": replaceReservedWords,
 		"makePublic":           g.makePublicFn,
+		"makePrivate":          makePrivate,
 		"findType":             g.findType,
 		"findSOAPAction":       g.findSOAPAction,
 		"findServiceAddress":   g.findServiceAddress,
+		"lower":                strings.ToLower,
 	}
 
 	data := new(bytes.Buffer)

@@ -147,7 +147,7 @@ func main() {
 
 	serverData := new(bytes.Buffer)
 	serverData.Write(gocode["server_header"])
-	serverData.Write(gocode["server_wsdl"])
+	// serverData.Write(gocode["server_wsdl"])
 	serverData.Write(gocode["server"])
 
 	serverSource, err := format.Source(serverData.Bytes())

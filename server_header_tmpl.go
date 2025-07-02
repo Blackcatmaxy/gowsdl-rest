@@ -6,16 +6,12 @@ var serverHeaderTmpl = `
 package {{.}}
 
 import (
-	"fmt"
-	"errors"
-	"reflect"
-	"strings"
-	"encoding/xml"
 	"net/http"
 
+	"github.com/gin-gonic/gin"
+	"github.com/hooklift/gowsdl/soap"
 	{{/*range .Imports*/}}
 		{{/*.*/}}
 	{{/*end*/}}
 )
-
 `
