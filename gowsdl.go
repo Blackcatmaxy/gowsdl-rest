@@ -516,9 +516,9 @@ var xsd2GoTypes = map[string]string{
 	"byte":               "int8",
 	"long":               "int64",
 	"boolean":            "bool",
-	"datetime":           "soap.XSDDateTime",
-	"date":               "soap.XSDDate",
-	"time":               "soap.XSDTime",
+	"datetime":           "string", //"soap.XSDDateTime" // seemed to struggle to get JSON (un)marshall to work
+	"date":               "string", //"soap.XSDDate",    // don't need it though if we're just passing from SOAP to REST
+	"time":               "string", //"soap.XSDTime",
 	"base64binary":       "[]byte",
 	"hexbinary":          "[]byte",
 	"unsignedint":        "uint32",
