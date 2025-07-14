@@ -7,7 +7,7 @@ func AddEndPoints(server *gin.Engine, client *soap.Client) {
 	{{range . -}}
 		{{range .Operations -}}
 				{{$requestType := findType .Input.Message | replaceReservedWords | makePublic -}} ` + `
-  				server.GET("/{{$requestType | lower }}", {{$requestType}}Func)
+  				server.POST("/{{$requestType | lower }}", {{$requestType}}Func)
 		{{end}}
 	{{end}}
 	soapClient = client
